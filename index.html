@@ -2,11 +2,66 @@
 <html>
 <head>
   <title>Deep Link POC</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    .link-group {
+      margin-bottom: 24px;
+    }
+
+    button {
+      font-size: 16px;
+      margin-right: 12px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .app-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .web-btn {
+      background-color: #e0e0e0;
+    }
+  </style>
 </head>
 <body>
   <h1>Bem-vindo ao teste de Deep Linking!</h1>
-  <p>Tente acessar <a href="./conteudo/123">/conteudo/123</a> com ou sem o app instalado.</p>
-  <p>Tente acessar <a href="./service_order/123">/service_order/123</a> com ou sem o app instalado.</p>
-  <p>Tente acessar <a href="./service_request/456">/service_request/456</a> com ou sem o app instalado.</p>
+
+  <div class="link-group">
+    <p>/conteudo/123</p>
+    <button class="app-btn" onclick="openApp('conteudo/123')">Abrir pelo app</button>
+    <button class="web-btn" onclick="openWeb('conteudo/123')">Continuar na web</button>
+  </div>
+
+  <div class="link-group">
+    <p>/service_order/123</p>
+    <button class="app-btn" onclick="openApp('service_order/123')">Abrir pelo app</button>
+    <button class="web-btn" onclick="openWeb('service_order/123')">Continuar na web</button>
+  </div>
+
+  <div class="link-group">
+    <p>/service_request/456</p>
+    <button class="app-btn" onclick="openApp('service_request/456')">Abrir pelo app</button>
+    <button class="web-btn" onclick="openWeb('service_request/456')">Continuar na web</button>
+  </div>
+
+  <script>
+    function openApp(path) {
+      // Personalize conforme o seu deep link scheme/host
+      window.location.href = 'flutterDeepLink://flutter-deep-link/' + path;
+    }
+
+    function openWeb(path) {
+      window.location.href = '/' + path;
+    }
+  </script>
 </body>
 </html>
