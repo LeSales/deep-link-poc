@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.example.deep_link_poc",
+      "package_name": "com.keepfy",
       "sha256_cert_fingerprints": [
-        "2E:79:E7:DA:8F:2A:C6:3F:88:19:DC:89:69:8A:D5:F9:ED:F7:A6:16:30:22:88:65:79:59:A2:B5:A3:0E:C5:91"
+        "EF:1B:87:AF:1D:39:AD:98:5D:B3:2B:46:B6:A9:6F:D1:E4:0D:B8:32:1E:B3:0E:28:F5:36:30:E1:79:D6:EB:17"
       ]
     }
   }
