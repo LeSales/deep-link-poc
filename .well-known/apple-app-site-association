@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "L2EWSXWW33.com.keepfy",
+        "paths": [
+          "/service-orders/*",
+          "/service-requests/*"
+        ]
+      }
+    ]
+  }
+}
