@@ -11,9 +11,11 @@
 
       if (type && id) {
         // Monta o link com esquema personalizado
-        const appUrl = `flutterDeepLink://flutter-deep-link/${type}/${id}`;
+        const appUrl = `intent://flutter-deep-link/${type}/${id}#Intent;scheme=flutterDeepLink;package=com.keepfy;end`;
+
         // Redireciona para o app
         window.location.href = appUrl;
+        console.log(appUrl);
 
         // Como fallback, redireciona para a versão web após 2 segundos
         setTimeout(() => {
