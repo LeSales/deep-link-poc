@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecionando…</title>
+  <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const type = urlParams.get('type'); // ex: service-orders
+      const id = urlParams.get('id');     // ex: 12345
+
+      if (type && id) {
+        // Monta o link com esquema personalizado
+        const appUrl = `flutterDeepLink://flutter-deep-link/${type}/${id}`;
+        // Redireciona para o app
+        window.location.href = appUrl;
+
+        // Como fallback, redireciona para a versão web após 2 segundos
+        setTimeout(() => {
+          window.location.href = `https://deep-link-poc.vercel.app/`;
+        }, 2000);
+      } else {
+        document.body.innerHTML = '<p>Parâmetros inválidos na URL.</p>';
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecionando, aguarde...</p>
+</body>
+</html>
